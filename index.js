@@ -59,41 +59,42 @@ function Person(id, gender) {
         this.match = p;
     }
 
-    this.swapWith = function(p) {
-        console.log("%s & %s swap partners", this.id, p.id);
+    this.swap = function(person) {
+        console.log("Swapped %s with %s ", this.id, person.id);
         var thisMatch = this.match;
-        var pMatch = p.match;
+        var pMatch = person.match;
         this.engageTo(pMatch);
-        p.engageTo(thisMatch);
+        person.engageTo(thisMatch);
     }
 }
 
-function isStable(guys, gals) {
-    for (var i = 0; i < guys.length; i++)
-        for (var j = 0; j < gals.length; j++)
-            if (guys[i].prefers(gals[j]) && gals[j].prefers(guys[i]))
+function checkStability(men, women) {
+    for (var i = 0; i < men.length; i++)
+        for (var j = 0; j < women.length; j++)
+            if (men[i].prefers(women[j]) && women[j].prefers(men[i]))
                 return false;
     return true;
 }
 
-function engageEveryone(guys) {
-    var done;
+function engageEveryone(men) {
+    var flag;
     do {
-        done = true;
-        for (var i = 0; i < guys.length; i++) {
-            var guy = guys[i];
-            if (!guy.match) {
-                done = false;
-                var gal = guy.nextCandidate();
-                if (!gal.match || gal.prefers(guy))
-                    guy.engageTo(gal);
+        flag = true;
+        for (var i = 0; i < men.length; i++) {
+            var man = men[i];
+            if (!man.match) {
+                flag = false;
+                var woman = man.nextCandidate();
+                if (!woman.match || woman.prefers(man))
+                    man.engageTo(woman);
             }
         }
-    } while (!done);
+    } while (!flag);
 }
 
 //Function to initalize the algorithm
 async function initialize() {
+    console.time("run")
 
     if (menPref == "" || womenPref == "") {
         console.error("Incorrect format of input file () \n Process exited with code : ", code)
@@ -122,6 +123,8 @@ async function initialize() {
     } else {
         console.error("Incorrect format of input file (Number of men == Number of women). \n Process exited with code : ", code)
     }
+
+    console.timeEnd("run")
 }
 
 async function matchPref() {
@@ -177,11 +180,11 @@ async function matchPref() {
         console.log("%s is engaged to %s", guys[i].id, guys[i].match.id);
     }
 
-    console.log("Stable = %s", isStable(guys, gals) ? "Yes" : "No");
+    console.log("Stable = %s", checkStability(guys, gals) ? "Yes" : "No");
 
-    guys[0].swapWith(guys[1]);
+    // guys[0].swap(guys[1]);
 
-    console.log("Stable = %s", isStable(guys, gals) ? "Yes" : "No");
+    // console.log("Stable = %s", checkStability(guys, gals) ? "Yes" : "No");
 }
 
 //Call function
