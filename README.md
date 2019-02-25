@@ -8,7 +8,7 @@ node v8.15.0
 This code was written for my Algorithm Design class taught by Dr. C Kirabas
 at University of Dayton.
 
-The input file contains a JSON Object (JavaScript Object Notation) with
+The input file contains a JSON (JavaScript Object Notation) with 
 the preferences of the men and women that need to be matched.
 
 To maintain simplicity all the men and women have been assigned a unique ID
