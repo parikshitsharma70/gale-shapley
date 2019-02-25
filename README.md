@@ -2,7 +2,7 @@
 
 ## Requirements 
 Built and tested on Ubuntu 18.04
-node v8.15.0
+node v8.15.0(or greater)
 
 ## Introduction
 This code was written for my Algorithm Design class taught by Dr. C Kirabas
@@ -17,10 +17,10 @@ Women have been assigned odd numbers : [1, 3, 5, ..]
 
 ## Usage
 To invoke the program run :
-node index.js <input_file>
+`node index.js <input_file>`
 
 To save the console logs to a file run :
-node index.js <input_file>   >   <log_file>
+`node index.js <input_file>   >   <log_file>`
 
 To generate random preference for n men and women run :
-node input.js <output_file> <n>
+`node input.js <output_file> <n>`
