@@ -1,0 +1,46 @@
+Men Pref : 
+{ '0': '3,9,1,5,11,13,17,15,19,7',
+  '2': '19,7,13,1,15,5,17,3,9,11',
+  '4': '19,1,5,7,9,15,3,13,17,11',
+  '6': '7,3,13,1,17,19,9,15,11,5',
+  '8': '15,1,5,17,7,13,19,9,3,11',
+  '10': '15,3,19,13,7,11,17,5,9,1',
+  '12': '7,9,11,13,1,3,19,15,17,5',
+  '14': '5,13,15,3,7,11,17,9,1,19',
+  '16': '17,3,11,1,7,13,9,5,15,19',
+  '18': '3,15,17,11,1,19,5,9,13,7' }
+
+
+Women Pref : 
+{ '1': '10,0,8,6,14,16,4,2,18,12',
+  '3': '0,6,8,2,10,14,12,16,4,18',
+  '5': '12,6,0,14,4,16,2,10,18,8',
+  '7': '14,6,8,12,0,4,16,10,2,18',
+  '9': '8,16,18,12,10,0,6,14,4,2',
+  '11': '14,12,10,6,8,18,16,2,0,4',
+  '13': '14,6,0,4,12,2,18,16,10,8',
+  '15': '2,18,14,6,4,16,12,0,8,10',
+  '17': '10,12,14,0,2,18,8,16,4,6',
+  '19': '2,8,14,12,6,0,18,16,10,4' }
+
+
+Input file is in correct format! 
+
+Size of input : 10
+
+Data Processed, starting matching process .. 
+
+Man 0 is matched with woman 3
+Man 2 is matched with woman 19
+Man 4 is matched with woman 1
+Man 6 is matched with woman 7
+Man 8 is matched with woman 15
+Man 10 is matched with woman 13
+Man 12 is matched with woman 9
+Man 14 is matched with woman 5
+Man 16 is matched with woman 17
+Man 18 is matched with woman 11
+
+Stable : Yes
+
+Execution time: 3.818ms
