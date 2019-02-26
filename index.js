@@ -53,9 +53,12 @@ class Person {
         };
         //Returns next best match for a Person
         this.nextMatch = function () {
-            if (index >= this.preference.length)
+            if (index >= this.preference.length){
                 return null;
-            return this.preference[index++];
+            }
+            else{
+                return this.preference[index++];
+            }
         };
         //Match one Person with the other
         this.matchWith = function (x) {

@@ -48,24 +48,19 @@ function generatePref(n){
     console.timeEnd("generate")
 }
 
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+function shuffle(arr) {
+    var current = arr.length
+    var temp 
+    var random
+    while (0 !== current) {
+        random = Math.floor(Math.random() * current)
+        current -= 1
+        temp = arr[current]
+        arr[current] = arr[random]
+        arr[randomIndex] = temp
     }
-  
     return array;
-  }
+}
   
 
 generatePref(n)
