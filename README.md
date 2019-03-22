@@ -5,7 +5,7 @@ Built and tested on Ubuntu 18.04
 node v8.15.0(or greater)
 
 ## Introduction
-This code was written for my Algorithm Design class taught by Dr. C Kirabas
+This code was written for my Algorithm Design class taught by Dr. C Kirbas
 at University of Dayton.
 
 The input file contains a JSON (JavaScript Object Notation) with 
